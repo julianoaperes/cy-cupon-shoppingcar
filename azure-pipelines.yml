@@ -1,0 +1,44 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+strategy:
+  matrix:
+    linux:
+      imageName: "ubuntu-latest"
+    mac:
+      imageName: "macOS-latest"
+    windows:
+      imageName: "windows-latest"
+  maxParallel: 3
+
+pool:
+  vmImage: $(imageName)
+
+steps:
+- task: UseNode@1
+  displayName: 'Install Node.js'
+  inputs:
+    version: '18.x'
+
+- script: |
+    yarn install
+  displayName: 'npm install and build'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'yarn cypress run'
+  displayName: 'Execução do testes de ponta a ponta (e2e)'
+  continueOnError: true
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: "JaCoCo"
+    summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
+    reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
+    failIfCoverageEmpty: true
