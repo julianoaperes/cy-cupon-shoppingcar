@@ -3,5 +3,10 @@ module.exports = {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    reporter: "junit",
+    reporterOptions: {
+      mochaFile: "results/output.xml",
+      toConsole: false,
+    },
   },
 };
