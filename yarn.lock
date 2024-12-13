@@ -5,6 +5,7 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+<<<<<<< HEAD
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -1611,3 +1612,10 @@ __metadata:
   checksum: 10c0/f265002af7541b9ec3589a27f5fb8f11cf348b53cc15e2751272e3c062cd73f3e715bc72d43257de71bbaecae446c3f1b14af7559e8ab0261625375541816422
   languageName: node
   linkType: hard
+=======
+"loja-integrada@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "loja-integrada@workspace:."
+  languageName: unknown
+  linkType: soft
+>>>>>>> b471dff71e2a57514ccf695fd4d7b19cfc454500
