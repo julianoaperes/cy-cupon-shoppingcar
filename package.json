@@ -1,0 +1,7 @@
+{
+  "name": "loja-integrada",
+  "packageManager": "yarn@4.5.3",
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  }
+}
