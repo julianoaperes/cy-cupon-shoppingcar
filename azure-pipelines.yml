@@ -20,3 +20,10 @@ steps:
       script: "yarn cypress run"
     displayName: "Execução do testes de ponta a ponta (e2e)"
     continueOnError: true
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: "JUnit"
+      testResultsFiles: "**/output.xml"
+      mergeTestResults: true
+      testRunTitle: "publicação dos resultados dos testes"
