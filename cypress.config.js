@@ -1,5 +1,6 @@
 module.exports = {
   e2e: {
+    baseUrl: "https://qastoredesafio.lojaintegrada.com.br/conta/login",
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
