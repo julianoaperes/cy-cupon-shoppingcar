@@ -407,6 +407,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress-xpath@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "cypress-xpath@npm:2.0.1"
+  checksum: 10c0/30502f132a6146b678d05decd3341bbdae62e43bfe4e0e0c7f8a706d992f5dfb4f9476b0a3395f17e711808e5469466690d64b993b62078ca8b76ebb1de4f067
+  languageName: node
+  linkType: hard
+
 "cypress@npm:^13.16.1":
   version: 13.16.1
   resolution: "cypress@npm:13.16.1"
@@ -1031,6 +1038,7 @@ __metadata:
   resolution: "loja-integrada@workspace:."
   dependencies:
     cypress: "npm:^13.16.1"
+    cypress-xpath: "npm:^2.0.1"
   languageName: unknown
   linkType: soft
 
